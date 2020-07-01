@@ -8,10 +8,22 @@
 
 
 def computepay(hrs, rate):
-    return float(hrs) * float(rate)
+    try:
+        nhrs = float(hrs)
+        nrate = float(rate)
+    except:
+        print('Please enter a number')
+        quit()
+
+    if nhrs > 40:
+        reg = nhrs * nrate
+        otp = (nhrs - 40) * (nrate * 0.5)
+        final_pay = reg + otp
+    else:
+        final_pay = nhrs * nrate
+    print('Pay:', final_pay)
 
 
 hrs = input('Enter Hours: ')
 rate = input('Enter rate: ')
-p = computepay(hrs, rate)
-print('Pay:', p)
+computepay(hrs, rate)
