@@ -21,9 +21,10 @@ def computepay(hrs, rate):
         final_pay = reg + otp
     else:
         final_pay = nhrs * nrate
-    print('Pay:', final_pay)
+    return(final_pay)
 
 
 hrs = input('Enter Hours: ')
 rate = input('Enter rate: ')
-computepay(hrs, rate)
+p = computepay(hrs, rate)
+print('Pay', p)
