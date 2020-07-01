@@ -4,6 +4,8 @@
 # and put out an appropriate message and ignore the number.
 # Enter 7, 2, bob, 10, and 4 and match the output below.
 
+# This program determines the max and min values in a given list of integers 
+
 lst = []
 while True:
     user_input = input('Enter a number: ')
@@ -15,5 +17,5 @@ while True:
         print('Invalid input')
 
 if lst:
-    print('max:', max(lst))
-    print('Min:', min(lst))
+    print('Maximum is', max(lst))
+    print('Minimum is', min(lst))
