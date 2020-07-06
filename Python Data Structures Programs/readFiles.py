@@ -2,9 +2,11 @@
 # and print the contents of the file in upper case.
 # Use the file words.txt
 
-fname = input('Enter file name: ')
-fhand = open(fname)
+# Use words.txt as the file name
+fname = input("Enter file name: ")
+fh = open(fname)
 
-print(fhand)
-# for line in fhand:
-#     print(line.upper())
+for line in fh:
+    final = line.strip()
+    print(final.upper())
+
